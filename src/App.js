@@ -11,7 +11,9 @@ function App() {
     <div className = {styles.app}>
       <div >
         <Header>
-          <SearchBar />
+        <SearchBar
+          onSearch={(ciudad) => alert(ciudad)}
+        />
         </Header>
       </div>
       <main className = {styles.main}>
