@@ -1,0 +1,47 @@
+
+.searchBar {
+    /* border: solid 1px #8d99ae; */
+    width: fit-content; /* Ajusta el ancho al contenido */
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex; /* Definir que hace! */
+    height: 48px;
+    align-items: center;
+    box-shadow: 1px 1px 8px  #8d99ae; /* Deja un sombreado al rededor de la cajita */
+    background-color: white;
+
+}
+
+
+.icon {
+    margin: 8px 16px;
+    color: #8d99ae;
+}
+
+.input {
+    padding: 8px;
+    border: none; /* Saca los bordes del input */
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.input:focus { /* son estados de css, cuando pones el mouse arriba es focus, el : es la propiedad de css */
+    outline: none; /* saca los bordes en negro que se genera cuando haces click en el input*/
+}
+.input::placeholder{ /* hay elemento de html que tienen pseudo clases, ej: el boton tiene la pseudo hover y focus, la pseudo clase placeholder del input logra darle estilo al texto que ingresamos en el placeholder del input en el SearchBar.jsx lleva dos veces el 2 puntos por un tema interno de html, para profundizar en como funcionan los dos puntos, leer mas de html MUERTO! xD */
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+
+.submit {
+    background-color: #3a86ff;
+    border: none;
+    color: white;
+    height: 100%;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 4px 12px;
+    min-width: 48px;
+    font-weight: 700;
+}

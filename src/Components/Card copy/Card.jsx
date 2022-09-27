@@ -1,6 +1,6 @@
 import React from 'react';
-import Temp from './Temp';
-import styles from "./SearchBar.module.css";
+import Temp from './temp.jsx';
+import styles from "./Style.module.css";
 
 export default function Card({max, min, name, img, onClose, main}) {
   return (

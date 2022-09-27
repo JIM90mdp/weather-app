@@ -1,0 +1,50 @@
+.app {
+    font-family: 'Noto Sans', sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* 
+.mainCity{
+    backdrop-filter: blur(8px);
+    background-color: #00000040;
+} */
+.reelCities,
+ .mainCity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainCity,
+ .app {
+    height: 100%;
+    min-height: 100vh; /* el tamaño minimo de la cajita sea el maximo de la pantalla, para eso el vh*/
+}
+.mainCard {
+    border-color: transparent;
+}
+.cardBtn:hover {
+    background-color: #c7c2c286;
+}
+.temp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* se centran horizontalmente los elementos */
+    padding: 0 0.9rem;
+}
+.main {
+    display: grid;/* */
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+.tempLabel {
+    font-size: 0.75rem;
+    font-weight: 300;
+    text-align: left;
+}
+.tempValue {
+    text-align: left;
+    font-size: 1.25rem;
+    font-weight: 700;
+}

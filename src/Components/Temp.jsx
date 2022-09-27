@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from "./SearchBar.module.css";
+import styles from "../Components/App.module.css";
 
 export default function Temp({label,value}) {
     return (

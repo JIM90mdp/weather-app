@@ -1,0 +1,47 @@
+.card > section {  /* dentro de la clase card hay un TAG que se llama section, le digo que quiero aplicar estilo al section que está adentro de la clase card */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* establece un "grid" y lo divide en 3 columnas, el 3 hace referencia al numero de columnas, el 1fr es una fraccion por cada columna*/
+}
+.card{
+    position: relative ;/* la posicion va a ser relativa al lugar donde esta contenidoi, va a buscar el elemento superior del cual es hijo y se va a poner en una posicion relativa dentro de el*/
+   
+    border: none;
+    border-radius: 1rem; /* Rem es una medida que estaba bazada en el tamañó de la fuente de root*/
+
+    padding: 0.25rem; /* habrá este espacio entre los elementos dentro de la card */
+
+    width: fit-content;
+    
+    display: flex;
+    flex-direction: column; /* dentro del div los elementos se ordenan en una columna*/
+    box-shadow: 2px 2px 4px  #8d99ae;
+    backdrop-filter: blur(2px);
+    background-color: #00000040;
+}
+.cardName{
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.cardBtn {
+    position: absolute;/*se superpone a cualquier cosa que esté dentro del elemento, no se pone una cosa seguida de la otra y queda como flotante. */
+    top: 0.25rem;
+    right: 0.25rem;
+
+    box-sizing: border-box;
+    width: 1.5rem;
+    height: 1.5rem;
+    
+    cursor: pointer;
+
+    border: 1px solid transparent;
+    border-radius: 9999px;
+
+    background-color: transparent;
+    box-shadow: 1px 1px 8px  #8d99ae;
+
+    transition: background-color 5mainCity00ms;
+}

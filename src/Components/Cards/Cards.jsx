@@ -1,6 +1,6 @@
 import React from 'react';
-import Card from './Card'
-import styles from "./SearchBar.module.css";
+import Card from '../Card/Card'
+import styles from "./Cards.module.css";
 
 
 export default function Cards({cities}) {

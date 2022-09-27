@@ -1,10 +1,10 @@
 import Header from "./Components/Header";
-import SearchBar from "./Components/SearchBar";
-import Card from "./Components/Card";
-import Cards from "./Components/Cards";
+import SearchBar from "./Components/SearchBar/SearchBar.jsx";
+import Card from "./Components/Card/Card.jsx";
+import Cards from "./Components/Cards/Cards.jsx";
 import data, { Cairns } from './data.js';
 
-import styles from "./Components/SearchBar.module.css";
+import styles from "./Components/App.module.css";
 
 function App() {
   return (
