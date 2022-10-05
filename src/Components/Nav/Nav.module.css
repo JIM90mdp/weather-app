@@ -1,0 +1,27 @@
+#logoHenry {
+    margin-right: 20px;
+  }
+
+.navbar {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    left: 0%;
+}
+
+.navbarSpan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font: 200;
+    width: 200px;
+    height: 33px;
+}
+
+.navBarLogo {
+    border-radius: 50%;
+    top: -35px;
+    width: 30px;
+    height: 30px;
+}

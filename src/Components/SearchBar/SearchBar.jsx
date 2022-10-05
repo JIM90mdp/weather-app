@@ -1,13 +1,24 @@
 /* CON LA METODOLOGÏA DE CSS MODULE LO QUE LOGRAS ES TENER EL ESTILO GUARDADO INDIVIDUALMENTE EN CADA COMPONENTE, NO IMPORTA SI TENES DOS SEARCHBAR DIFERENTES, CADA UNO TENDRA SU PROPIO CSS MODULE*/
-import React from 'react'
+import React, { useState } from "react";
+
 import styles from "./SearchBar.module.css";
 import { BsSearch } from 'react-icons/bs';
 
 export default function SearchBar({onSearch}) {
+  const [city, setCity] = useState('')
   return (
-    <form className = {styles.searchBar}>
+    <form className = {styles.searchBar} onSubmit = { (e) => {
+      e.preventDefault();
+      onSearch(city);
+      setCity('');
+    }}>
         <BsSearch className = {styles.icon} />
-        <input className = {styles.input} placeholder = "buscar..." />
+        <input className = {styles.input} 
+        type = "text"
+        placeholder = "buscar..." 
+        onChange = {e => setCity(e.target.value)}
+        value = {city}
+        />
         <button 
         onClick = {() => onSearch("Buscando ciudad...")}
         className = {styles.submit} 

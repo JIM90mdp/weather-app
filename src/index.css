@@ -8,11 +8,12 @@ header {
   width: 100%;
   height: 80px;
   background-color: #ffffff49;
-  display: flex; /* Definir que hace! */
-  justify-content: center; /* alinea orizontalmente */
-  align-items: center; /* alinear verticalmente */
   padding: 0 16px;
   box-sizing: border-box;
   backdrop-filter: blur(4px);
   border-bottom: 0.5px solid #ffffff49;
+  
+  display: flex; /* Definir que hace! */
+  justify-content: center; /* alinea orizontalmente */
+  align-items: center; /* alinear verticalmente */
 }

@@ -4,7 +4,8 @@
 }
 .card{
     position: relative ;/* la posicion va a ser relativa al lugar donde esta contenidoi, va a buscar el elemento superior del cual es hijo y se va a poner en una posicion relativa dentro de el*/
-   
+    top: 30px;
+
     border: none;
     border-radius: 1rem; /* Rem es una medida que estaba bazada en el tamañó de la fuente de root*/
 
@@ -24,6 +25,7 @@
     text-align: left;
     font-size: 1.5rem;
     font-weight: 400;
+    color: #fff;
 }
 
 .cardBtn {
