@@ -1,0 +1,27 @@
+.form {
+    position: relative;
+
+    border: none;
+    border-radius: 2rem;
+    background-color: transparent;
+    box-shadow: 2px 2px 4px #8d99ae;
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(15px);
+    background-color: #00000040;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-emphasis-color: white;
+
+}
+
+p.danger {
+    color: red;
+    font-size: 10px;
+}
+
+input.danger {
+    border: 2px solid red;
+}

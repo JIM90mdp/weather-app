@@ -1,6 +1,6 @@
 /* CON LA METODOLOGÏA DE CSS MODULE LO QUE LOGRAS ES TENER EL ESTILO GUARDADO INDIVIDUALMENTE EN CADA COMPONENTE, NO IMPORTA SI TENES DOS SEARCHBAR DIFERENTES, CADA UNO TENDRA SU PROPIO CSS MODULE*/
 import React, { useState } from "react";
-
+import { Route } from 'react-router-dom';
 import styles from "./SearchBar.module.css";
 import { BsSearch } from 'react-icons/bs';
 
@@ -12,6 +12,7 @@ export default function SearchBar({onSearch}) {
       onSearch(city);
       setCity('');
     }}>
+      <Route path="/">
         <BsSearch className = {styles.icon} />
         <input className = {styles.input} 
         type = "text"
@@ -27,6 +28,7 @@ export default function SearchBar({onSearch}) {
         > 
         buscar 
         </button>
+      </Route>
     </form>
   )
 }

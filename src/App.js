@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
+import { Route, Switch } from 'react-router-dom'
 
-import Header from "./Components/Header";
+import Ciudad from "./Components/Ciudad/Ciudad.jsx"
+import About from "./Components/About/About.jsx";
+import Header from "./Components/Header/Header";
 import Nav from "./Components/Nav/Nav.jsx"
 // import SearchBar from "./Components/SearchBar/SearchBar.jsx";
 import Cards from "./Components/Cards/Cards.jsx";
 
 import styles from "./Components/App.module.css";
+import Form from './Components/Form/Form.jsx';
 
+// apyKey= 4ae2636d8dfbdc3044bede63951a019b
+// TENER CUIDAD CON LA APYKEY, esconderla en una variable de enterno en un archivo .env para que no quede publica
 
 function App() {
   const [cities, setCities] = useState('');
@@ -35,7 +41,17 @@ function App() {
         };
         setCities(cities => [...cities, ciudad]);
       })
-  }
+    }
+
+    function onFilter(ciudadId) {
+      let ciudad = cities.filter(c => c.id === parseInt(ciudadId));
+      if (ciudad.length > 0) {
+        return ciudad[0];
+      } else {
+        return null;
+      }
+    }
+  
   function onClose(id) {
     // setCities vuelve a modificar las ciudades, pero va a filtrar las ciudad, de modo tal que al recibis una ciudad con su propio id y filtra el arreglo de las ciudades y renderiza el resto
     setCities(oldCities => oldCities.filter(c => c.id !== id))
@@ -43,18 +59,41 @@ function App() {
   return (
     <div className={styles.app}>
       <div >
-        <Header>
+        <Route path="/">
+          <Header>
             <Nav
               onSearch={onSearch}
             />
-        </Header>
+          </Header>
+        </Route>
       </div>
-      <section className={styles.reelCities}>
-        <Cards
-          cities={cities}
-          onClose={onClose}
-        />
-      </section>
+
+      <Switch>
+
+        <Route path="/" exact>
+          <section className={styles.reelCities}>
+            <Cards
+              cities={cities}
+              onClose={onClose}
+            />
+          </section>
+        </Route>
+
+        <Route path="/about">
+          <About />
+        </Route>
+        
+        <Route path="/form">
+          <Form />
+        </Route>
+
+        <Route path="/ciudad/:id"
+          render={({match}) =>{
+            return <Ciudad city={onFilter(match.params.id)}/>
+          }}
+          />
+
+      </Switch>
     </div>
   );
 }

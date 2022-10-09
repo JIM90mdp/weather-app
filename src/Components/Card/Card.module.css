@@ -47,3 +47,7 @@
 
     transition: background-color 5mainCity00ms;
 }
+
+.link {
+    color: pink;
+}

@@ -8,6 +8,7 @@ export default function Cards({cities, onClose}) {
     return (
       <div className={styles.cards}>
         {cities.map(c => <Card
+            id={c.id}
             max={c.max}
             min={c.min}
             name={c.name}

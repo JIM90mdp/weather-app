@@ -1,0 +1,16 @@
+.about {
+    position: relative;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.25rem;
+    width: 500px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 2px 4px #8d99ae;
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(15px);
+    background-color: #00000040;
+    top: 193px;
+    text-align: center;
+}
